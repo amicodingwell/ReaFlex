@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1017" />
+
+  <title>ReaFlex — Natural Vocal Tuning for REAPER</title>
+  <meta
+    name="description"
+    content="ReaFlex is a visual vocal tuning and pitch-shaping tool for REAPER with note editing, key/scale snapping, per-note controls, and an experimental custom resynthesis engine."
+  />
+
+  <!-- Replace these once you know your final GitHub Pages URL. -->
+  <meta property="og:title" content="ReaFlex — Natural Vocal Tuning for REAPER" />
+  <meta
+    property="og:description"
+    content="Visual vocal tuning, note editing, key/scale snapping, per-note controls, and custom resynthesis for REAPER."
+  />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="ReaFlex home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <path d="M5 21h5l3-10 5 19 4-14 4 9 3-7 3 3h3" />
+          </svg>
+        </span>
+        <span>ReaFlex</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
+        <a href="#install">Install</a>
+        <a href="#guide">How to use</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
+        <a class="nav-cta" href="#download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="hero-glow hero-glow-a"></div>
+      <div class="hero-glow hero-glow-b"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            Vocal tuning for REAPER
+          </div>
+
+          <h1>
+            FREE Natural vocal tuning,
+            <span class="gradient-text">inside REAPER.</span>
+          </h1>
+
+          <p class="hero-lede">
+            ReaFlex turns monophonic vocal audio into editable note blocks so you can
+            correct pitch, snap performances to a key, preserve expressive movement,
+            and fine-tune individual notes without leaving REAPER.
+          </p>
+
+          <div class="hero-actions">
+            <!-- Replace #download with your GitHub Releases URL when ready. -->
+            <a class="button button-primary" href="#download">
+              Download ReaFlex
+              <span aria-hidden="true">↓</span>
+            </a>
+
+            <a class="button button-secondary" href="#demo">
+              Watch quick demo
+              <span aria-hidden="true">▶</span>
+            </a>
+          </div>
+
+          <div class="hero-meta" aria-label="Project highlights">
+            <span>Visual note editing</span>
+            <span>Per-note controls</span>
+            <span>Key & scale snapping</span>
+            <span>Custom resynth backend</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay">
+          <figure class="hero-screenshot">
+            <img
+              src="assets/screenshots/simple-mode.png"
+              alt="ReaFlex Simple mode interface in REAPER"
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption>
+              ReaFlex Simple mode — focused controls for fast vocal tuning.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="ReaFlex workflow">
+      <div class="container trust-grid">
+        <div>
+          <strong>1.</strong>
+          <span>Analyze</span>
+        </div>
+        <div>
+          <strong>2.</strong>
+          <span>Edit notes</span>
+        </div>
+        <div>
+          <strong>3.</strong>
+          <span>Tune & shape</span>
+        </div>
+        <div>
+          <strong>4.</strong>
+          <span>Apply in REAPER</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">What ReaFlex does</span>
+          <h2>Pitch correction without hiding the performance.</h2>
+          <p>
+            ReaFlex gives you a note-based editing workflow for vocals while keeping
+            detailed control over tuning strength, timing, vibrato, formants and output.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">♪</div>
+            <h3>Visual note editing</h3>
+            <p>
+              Analyze monophonic vocals into editable note blocks and move, resize,
+              split, merge and shape notes directly in the ReaFlex editor.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">◎</div>
+            <h3>Centre-pitch correction</h3>
+            <p>
+              Pull sharp and flat notes toward the exact centre of the intended pitch,
+              with adjustable correction strength, confidence and retune speed.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">♯</div>
+            <h3>Key & scale snapping</h3>
+            <p>
+              Choose a root and scale, then snap the current note targets into the
+              musical context of the song.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">≈</div>
+            <h3>Vibrato preservation</h3>
+            <p>
+              Decide how much natural movement remains after correction instead of
+              flattening every note into a static line.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">↕</div>
+            <h3>Per-note control</h3>
+            <p>
+              Switch from overall settings to per-note editing for notes that need
+              different tuning, timing or tonal treatment.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">◫</div>
+            <h3>Simple & Advanced modes</h3>
+            <p>
+              Start with the highest-utility controls, then reveal detailed formant,
+              resynth, analysis and navigation settings when you need them.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">∿</div>
+            <h3>ReaFlex Resynth</h3>
+            <p>
+              Use the experimental phase-coherent resynthesis backend for custom pitch
+              processing, including adjustable Phase Tightness and natural/robotic tone.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="icon-box" aria-hidden="true">▶</div>
+            <h3>Click-to-audition</h3>
+            <p>
+              Optionally listen to a corrected note directly from the editor when you
+              click it, making small tuning decisions faster.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Quick demo</span>
+          <h2>Hear what changes, not just what the controls do.</h2>
+          <p>
+            Add a short before/after walkthrough here. A 30–90 second clip is ideal:
+            show analysis, note editing, key snapping and the corrected result.
+          </p>
+        </div>
+
+        <div class="media-panel reveal">
+          <!-- OPTION 1: Local MP4
+          Put demo.mp4 in assets/video/, then remove the demo-placeholder div
+          and uncomment this:
+
+          <video controls preload="metadata" poster="assets/screenshots/video-poster.jpg">
+            <source src="assets/video/demo.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+          -->
+
+          <!-- OPTION 2: YouTube
+          Replace VIDEO_ID and use:
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+              title="ReaFlex quick demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          -->
+
+          <div class="demo-placeholder">
+            <button class="play-orb" type="button" data-demo-placeholder aria-label="Demo video placeholder">
+              <span>▶</span>
+            </button>
+            <div>
+              <strong>Demo video goes here</strong>
+              <span>30–90 seconds • before / edit / after</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-points">
+          <div>
+            <strong>Before</strong>
+            <span>Original monophonic vocal</span>
+          </div>
+          <div>
+            <strong>Edit</strong>
+            <span>Analyze, snap and fine-tune notes</span>
+          </div>
+          <div>
+            <strong>After</strong>
+            <span>Hear the corrected vocal in context</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section screenshots-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Interface</span>
+          <h2>Show the workflow at a glance.</h2>
+          <p>
+            These cards are ready for your screenshots. Replace each placeholder image
+            with a real capture and keep the captions short.
+          </p>
+        </div>
+
+        <div class="shot-grid">
+          <button
+            class="shot-card reveal"
+            type="button"
+            data-lightbox="assets/screenshots/simple-mode.png"
+            data-caption="Simple mode — the core ReaFlex controls."
+          >
+            <div class="shot-placeholder">
+              <span>01</span>
+              <strong>Simple mode screenshot</strong>
+            </div>
+            <span class="shot-copy">
+              <strong>Simple mode</strong>
+              <small>Core tuning controls without the clutter.</small>
+            </span>
+          </button>
+
+          <button
+            class="shot-card reveal"
+            type="button"
+            data-lightbox="assets/screenshots/advanced-mode.png"
+            data-caption="Advanced mode — detailed tuning and resynthesis controls."
+          >
+            <div class="shot-placeholder">
+              <span>02</span>
+              <strong>Advanced mode screenshot</strong>
+            </div>
+            <span class="shot-copy">
+              <strong>Advanced mode</strong>
+              <small>Detailed resynth, formant and navigation controls.</small>
+            </span>
+          </button>
+
+          <button
+            class="shot-card reveal"
+            type="button"
+            data-lightbox="assets/screenshots/per-note.png"
+            data-caption="Per-note mode — individual settings for selected notes."
+          >
+            <div class="shot-placeholder">
+              <span>03</span>
+              <strong>Per-note screenshot</strong>
+            </div>
+            <span class="shot-copy">
+              <strong>Per-note editing</strong>
+              <small>Fine-tune the notes that need special attention.</small>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="install">
+      <div class="container install-grid">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Installation</span>
+          <h2>Install once. Run it from REAPER.</h2>
+          <p>
+            ReaFlex uses a ReaScript for the editor and a JSFX file for the custom
+            resynthesis backend.
+          </p>
+
+          <div class="requirements">
+            <span>REAPER</span>
+            <span>ReaImGui</span>
+            <span>ReaFlex Lua script</span>
+            <span>ReaFlex JSFX</span>
+          </div>
+        </div>
+
+        <div class="steps-card reveal">
+          <ol class="steps">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Install ReaImGui</strong>
+                <p>
+                  Install ReaImGui through ReaPack if you do not already have it.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Copy the JSFX</strong>
+                <p>
+                  In REAPER, open the resource path and copy the ReaFlex resynth file into:
+                </p>
+                <code>Effects/ReaFlex/</code>
+              </div>
+            </li>
+
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Load the Lua script</strong>
+                <p>
+                  Open REAPER's Actions list, choose “Load ReaScript”, and select the
+                  ReaFlex Lua file.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span>04</span>
+              <div>
+                <strong>Run ReaFlex</strong>
+                <p>
+                  Select a monophonic vocal item, launch ReaFlex, and analyze the take.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guide-section" id="guide">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Getting started</span>
+          <h2>A simple first-pass workflow.</h2>
+          <p>
+            Start in Simple mode, get the musical result right, and only open Advanced
+            when you need a more surgical adjustment.
+          </p>
+        </div>
+
+        <div class="workflow">
+          <article class="workflow-step reveal">
+            <div class="workflow-index">01</div>
+            <div>
+              <h3>Select your vocal</h3>
+              <p>
+                Select a dry, monophonic vocal audio item in REAPER, then launch ReaFlex.
+              </p>
+            </div>
+          </article>
+
+          <article class="workflow-step reveal">
+            <div class="workflow-index">02</div>
+            <div>
+              <h3>Analyze the take</h3>
+              <p>
+                Run analysis to detect pitch over time and build editable note blocks.
+              </p>
+            </div>
+          </article>
+
+          <article class="workflow-step reveal">
+            <div class="workflow-index">03</div>
+            <div>
+              <h3>Choose key & scale</h3>
+              <p>
+                Pick the song's musical key and scale. ReaFlex can snap note targets
+                into that context.
+              </p>
+            </div>
+          </article>
+
+          <article class="workflow-step reveal">
+            <div class="workflow-index">04</div>
+            <div>
+              <h3>Set the correction</h3>
+              <p>
+                Use Perfect Tuning, Centre Pitch, Vibrato and Retune controls to define
+                the overall feel.
+              </p>
+            </div>
+          </article>
+
+          <article class="workflow-step reveal">
+            <div class="workflow-index">05</div>
+            <div>
+              <h3>Fix difficult notes</h3>
+              <p>
+                Drag note blocks or switch to Per Note mode for individual corrections.
+              </p>
+            </div>
+          </article>
+
+          <article class="workflow-step reveal">
+            <div class="workflow-index">06</div>
+            <div>
+              <h3>Apply the result</h3>
+              <p>
+                When you're happy, use Apply Take or the available advanced apply tools
+                to commit the processing.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section defaults-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Designed to start useful</span>
+          <h2>Natural starting defaults.</h2>
+        </div>
+
+        <div class="defaults-grid">
+          <div class="default-card reveal">
+            <span>Perfect tuning</span>
+            <strong>100%</strong>
+          </div>
+
+          <div class="default-card reveal">
+            <span>Centre pitch</span>
+            <strong>On</strong>
+          </div>
+
+          <div class="default-card reveal">
+            <span>Centre confidence</span>
+            <strong>0%</strong>
+          </div>
+
+          <div class="default-card reveal">
+            <span>Vibrato preserve</span>
+            <strong>5%</strong>
+          </div>
+
+          <div class="default-card reveal">
+            <span>Retune speed</span>
+            <strong>100 ms</strong>
+          </div>
+
+          <div class="default-card reveal">
+            <span>Default backend</span>
+            <strong>ReaFlex Resynth</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div class="section-heading reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Common questions.</h2>
+          <p>
+            Keep this section practical. It is often where first-time users decide
+            whether they understand what the tool is for.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>What kind of audio is ReaFlex designed for?</summary>
+            <p>
+              ReaFlex is primarily designed around monophonic vocal material where one
+              clear sung pitch is present at a time.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does ReaFlex replace REAPER's normal editing workflow?</summary>
+            <p>
+              No. ReaFlex is intended to work inside REAPER as a focused vocal-pitch
+              editing layer, while the rest of your session stays in the normal REAPER
+              environment.
+            </p>
+          </details>
+
+          <details>
+            <summary>What is the ReaFlex Resynth engine?</summary>
+            <p>
+              It is an experimental custom JSFX backend used by ReaFlex for pitch
+              processing. The current phase-coherent version includes controls such as
+              Phase Tightness and natural/robotic formant character.
+            </p>
+          </details>
+
+          <details>
+            <summary>What is the difference between Simple and Advanced mode?</summary>
+            <p>
+              Simple mode keeps the high-utility tuning controls visible. Advanced mode
+              exposes deeper resynthesis, formant, analysis and navigation settings.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I tune individual notes differently?</summary>
+            <p>
+              Yes. Switch to Per Note mode to edit selected notes independently from the
+              overall settings.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I hear a note before committing it?</summary>
+            <p>
+              Yes. Enable Listen on Click to audition corrected notes from the editor
+              without applying the take first.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section download-section" id="download">
+      <div class="container">
+        <div class="download-card reveal">
+          <div>
+            <span class="eyebrow">Get ReaFlex</span>
+            <h2>Ready to tune inside REAPER?</h2>
+            <p>
+              Point these buttons at your GitHub repository and Releases page before
+              publishing.
+            </p>
+          </div>
+
+          <div class="download-actions">
+            <!-- Replace these placeholder URLs. -->
+            <a
+              class="button button-primary"
+              href="https://github.com/amicodingwell/reaflex/releases"
+            >
+              Download latest release
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://github.com/amicodingwell/reaflex"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <section class="section donation-section" id="support">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Support ReaFlex</span>
+          <h2>Help support development.</h2>
+          <p>
+            If ReaFlex is useful in your workflow and you'd like to help support
+            continued development, you can do so through Ko-fi.
+          </p>
+        </div>
+
+        <div class="donation-card reveal">
+          <iframe id='kofiframe' src='https://ko-fi.com/beedub93/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='beedub93'></iframe>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40">
+              <path d="M5 21h5l3-10 5 19 4-14 4 9 3-7 3 3h3" />
+            </svg>
+          </span>
+          <span>ReaFlex</span>
+        </a>
+        <p>Visual vocal tuning and pitch shaping for REAPER.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#guide">How to use</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
+      </div>
+
+      <div class="footer-meta">
+        <span>Built for REAPER</span>
+        <span>© <span id="year"></span> ReaFlex</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+    <button class="lightbox-close" type="button" aria-label="Close screenshot">×</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" />
+      <p></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
